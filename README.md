@@ -1,6 +1,33 @@
 # AWS-SNOWFLAKE-TABLEAU
 
-# Product-Sales-Dashboard
+## AWS
+
+**Step 1: Creating & Loading Data to S3 Bucket**
+
+First of all I opened my account to create the bucket, and for that I had to choose a storage and as for that I choose S3. After this by clicking on the options create bucket I filled out the nessecary details like, bucket type, region (which is same as in snowflake), & bucket name and like this I created a bucket under tha name, ' '. 
+
+Now that I had created the bucket, I loaded my dataset into the bucket by clicking on the same available in general purpose bucket, after this by simply clicking on upload and then at add files I loaded the dataset into the AWS
+
+**Step 2: Creating a Role**
+
+well the role here is needed to establish a connection between AWS and Snowflake.
+and to create a role first of all we need to go on the console home. then under the all services I choose IAM, then under the Access Management by clicking on roles I then clicked on create role then under that, by filling out the 3 step details I created the Role.
+
+## Snowflake + AWS
+
+**Step 1: Creating The Integration Object & Updating The Trust Policy**
+
+For this I first of all clicked on home tab and then under the projects I opened a new worksheet and wrote a piece of code. After this since I needed to update the bucket details so going back to the AWS accounts console home in the all services I choose S3 under Storage, and then I clicked on the bucket I had created previously, and updated the Storage Allowed Location as per the name of the project, and also updated the Storage ARN Role ARN as per the ARN in Role. After that I exceuted the piece of code for Integration Object in snowflake by pressing Ctrl + Enter. Later this I also exceuted the code for updating The trust policy in amazon account in snowflake by selecting it and pressing Ctrl + Enter.
+
+After all that finally I updated the Trust Policy accordingly in AWS. Going to the roles in the Trust Relationships, I clicked on the edit trust policy. Here I updated the "AWS" value to the User ARN value which I got after executing the code in snowflake, apart that I also updated the "sts:externalid" value which i had previously filled with some random values to the values I got after executing the code in snowflake. then I clicked on update policy and updated the policy.
+
+**Step 2: Loading the Data into Snowflake**
+
+Here first of all I created a database
+
+
+
+# Dashboard
 
 **Structure and Order**
 1. Project Title/ Headline

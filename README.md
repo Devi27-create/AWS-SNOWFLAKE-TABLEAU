@@ -45,17 +45,17 @@ A dynamic, interactive data visualization tool built to explore product sales da
 
 **2. Short Description/ Purpose**
 Example:
-Product Sales Dashboard is a visually engaging and analytical Power BI report designed to help users explore and compare 6 products across 5 countries. The dashboard focuses on highlighting Top 5 Sales, Top 5 Profit, and Top 5 Quantity sold. With trends in the year 2013 and 2014. Showcasing total sales and its percentage in segments like Government, Midmarket, Enterprise, Channel Partners, and Small Businesses.
+Energy Consumption Dashboard is a visually engaging and analytical Tableau report designed to help users explore and compare KWH and CSU by country, region, and energy source, across multiple countries. The dashboard focuses on highlighting Top 6 KWH by region, Top 6 CSU by region, Top 5 KWH Energy Source, Top 5 CSU Energy Source, KWH by country and CSU by country. With trends in the year 2013 and 2014. Showcasing total sales and its percentage in segments like Government, Midmarket, Enterprise, Channel Partners, and Small Businesses.
 
 **3. Tech Stack**
 Example:
-Power BI Desktop - Main data visualization platform used for report creation.
-Power Query - Data transformation and preparing data.
-File Format - .pbix for development and .png for dashboard previous.
+AWS+Snowflake - 
+Tableau - Main data visualization platform used for report creation.
+File Format - .twb for development and .png for dashboard previous.
 
 **4. Data Source**
 Example:
-Source: https://learn.microsoft.com/en-us/power-bi/create-reports/sample-financial-download
+Source: https://www.udemy.com/course/complete-data-analyst-bootcamp-from-basics-to-advanced/learn/lecture/47789127#overview
 
 **5. Features/Highlights**
 1. Key Questions
@@ -113,7 +113,7 @@ The Clustered Column Chart visually represents the manufacturing costs associate
 The line chart presents a detailed comparison of profit and sales figures for the years 2013 and 2014. It breaks down the data into various segments, including quarterly, monthly, and daily analyses. 
 
 **6.Screenshots:**
-See what the dashboard looks like - ![Alt Text](https://github.com/Devi27-create/Product-Sales-Dashboard/blob/main/Total%20Quantity%20Sold%20By%20Segment%20Trends%20Of%20Sales%20In%20Different%20Countries%20Total%20Discounts%20by%20Discount%20Bands.png)
+See what the dashboard looks like - ![Alt Text](https://github.com/Devi27-create/Product-Sales-Dashboard/blob/main/Total%20Quantity%20Sold%20By%20Segment%20Trends%20Of%20Sales%20In%20Different%20Countries%20Total%20Discounts%20by%20Discount%20Bands.png](https://github.com/Devi27-create/AWS-SNOWFLAKE-TABLEAU/blob/main/Energy_Consumption_dashboard.png)
 
-See what the other dashboard looks like -  ![Alt Text](https://github.com/Devi27-create/Product-Sales-Dashboard/blob/main/Top%205%20Product%20By%20Profit%2C%20Quantity%20and%20Sales%20Manufacturing%20Cost%20Of%20Different%20Products%20In%20Different%20Countries%20Profit%20BY%20Time%20Period.png)
+
 

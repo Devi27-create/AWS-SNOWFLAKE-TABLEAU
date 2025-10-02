@@ -113,7 +113,7 @@ The Clustered Column Chart visually represents the manufacturing costs associate
 The line chart presents a detailed comparison of profit and sales figures for the years 2013 and 2014. It breaks down the data into various segments, including quarterly, monthly, and daily analyses. 
 
 **6.Screenshots:**
-See what the dashboard looks like - ![Alt Text](https://github.com/Devi27-create/Product-Sales-Dashboard/blob/main/Total%20Quantity%20Sold%20By%20Segment%20Trends%20Of%20Sales%20In%20Different%20Countries%20Total%20Discounts%20by%20Discount%20Bands.png](https://github.com/Devi27-create/AWS-SNOWFLAKE-TABLEAU/blob/main/Energy_Consumption_dashboard.png)
+See what the dashboard looks like - ![Alt Text](https://github.com/Devi27-create/Product-Sales-Dashboard/blob/main/Total%20Quantity%20Sold%20By%20Segment%20Trends%20Of%20Sales%20In%20Different%20Countries%20Total%20Discounts%20by%20Discount%20Bands.png](https://github.com/Devi27-create/AWS-SNOWFLAKE-TABLEAU/blob/main/Energy_Consumption_dashboard.png).
 
 
 

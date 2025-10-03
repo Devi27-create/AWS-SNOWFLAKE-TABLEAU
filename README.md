@@ -1,10 +1,10 @@
-# AWS-SNOWFLAKE-TABLEAU
+# AWS-SNOWFLAKE-TABLEAU(Energy Consumption Dashboard)
 
 ## AWS
 
 **Step 1: Creating & Loading Data to S3 Bucket**
 
-First of all I opened my account to create the bucket, and for that I had to choose a storage and as for that I choose S3. After this by clicking on the options create bucket I filled out the nessecary details like, bucket type, region (which is same as in snowflake), & bucket name and like this I created a bucket under tha name, ' '. 
+First of all I opened my account to create the bucket, and for that I had to choose a storage and as for that I choose S3. After this by clicking on the options create bucket I filled out the nessecary details like, bucket type, region (which is same as in snowflake), & bucket name and like this I created a bucket under tha name, 'tableau.project'. 
 
 Now that I had created the bucket, I loaded my dataset into the bucket by clicking on the same available in general purpose bucket, after this by simply clicking on upload and then at add files I loaded the dataset into the AWS
 
@@ -15,7 +15,7 @@ and to create a role first of all we need to go on the console home. then under 
 
 ## Snowflake + AWS
 
-**Step 1: Creating The Integration Object & Updating The Trust Policy**
+**Step 1: Creating The Integration Object & Updating The Trust Policy** 
 
 For this I first of all clicked on home tab and then under the projects I opened a new worksheet and wrote a piece of code. After this since I needed to update the bucket details so going back to the AWS accounts console home in the all services I choose S3 under Storage, and then I clicked on the bucket I had created previously, and updated the Storage Allowed Location as per the name of the project, and also updated the Storage ARN Role ARN as per the ARN in Role. After that I exceuted the piece of code for Integration Object in snowflake by pressing Ctrl + Enter. Later this I also exceuted the code for updating The trust policy in amazon account in snowflake by selecting it and pressing Ctrl + Enter.
 
@@ -23,7 +23,8 @@ After all that finally I updated the Trust Policy accordingly in AWS. Going to t
 
 **Step 2: Loading the Data into Snowflake**
 
-Here first of all I created a database
+Here first of all I wrote a code to create a database naming tableau and executed the code. After that I wrote the code for schema naming tableau_data and exceuted the same and then I created a blank table naming tableau_dataset having the columns with there datatypes, according to the available dataset and then I executed that code as well. 
+Now I needed to create a stage to bring the data into snowflake and for that I wrote another code mentioning the stage name as tableau.tableau_dataset.tableau_stage then the url and storage_integration and then executed this. After this I copied the data into the table we have created "tableau_dataset" from the stage we have created in the last step and executed it and then I run the select statement to see the data that had got loaded into Snowflake. 
 
 
 

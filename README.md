@@ -148,30 +148,26 @@ SELECT * FROM energy_consumption;
 
 **Structure and Order**
 1. Project Title/ Headline
-2. Short Description/ Purpose
+2. Short Description
 3. Tech Stack
 4. Data Source
 5. Features/Highlights
 6. Screenshots
 
 **1. Project Title/ Headline**
-A concise, descriptive name for the dashboard.
-Example:
-Product-Sales: Product Sales Insights Dashboard
-A dynamic, interactive data visualization tool built to explore product sales data of different countries, trends by years, profits, and sales in different segments.
+***Project Title: Energy Consumption Dashboard***  
+This project presents an innovative and interactive data visualization tool designed to facilitate the exploration of kilowatt-hour (KWH) and carbon stack usage (CSU) across various countries.
 
-**2. Short Description/ Purpose**
-Example:
-Energy Consumption Dashboard is a visually engaging and analytical Tableau report designed to help users explore and compare KWH and CSU by country, region, and energy source, across multiple countries. The dashboard focuses on highlighting Top 6 KWH by region, Top 6 CSU by region, Top 5 KWH Energy Source, Top 5 CSU Energy Source, KWH by country and CSU by country. With trends in the year 2013 and 2014. Showcasing total sales and its percentage in segments like Government, Midmarket, Enterprise, Channel Partners, and Small Businesses.
+**2. Short Description**
+Energy Consumption Dashboard is a visually engaging and analytical Tableau report designed to help users explore and compare KWH and CSU by country, region, and energy source, across multiple countries. The dashboard focuses on highlighting Top 6 KWH by region, Top 6 CSU by region, Top 5 KWH Energy Source, Top 5 CSU Energy Source, KWH by country and CSU by country.
+The Energy Consumption Dashboard serves as an engaging and analytical Tableau report, desiged to empower users in examining and comparing energy usage metrics, specifically KWH and CSU, by country, region, and energy source. The dashboard is structured to emphasize key insights, including the Top 6 KWH and Top 6 CSU by region, as well as the Top 5 KWH and Top 5 CSU by energy source. Users can seamlessly navigate the data to view KWH and CSU metrics on a country-by-country basis, enabling a comprehensive understanding of energy consumption patterns across the globe. This tool is particularly valuable for policymakers, researchers, and businesses seeking to analyze energy efficiency and sustainability initiatives.
 
 **3. Tech Stack**
-Example:
-AWS+Snowflake - 
-Tableau - Main data visualization platform used for report creation.
-File Format - .twb for development and .png for dashboard previous.
+AWS+Snowflake - Utilized for robust data storage and management, supporting large-scale data processing essential for real-time analysis
+Tableau - The primary data visualization platform used to create the dashboard, offering advanced graphical representations and interactive features that enhance user engagement and comprehension of the data.
+File Format - The dashboard is developed in .twb format for easy updates and maintenance, with snapshot visualizations saved as .png files for sharing and reporting purposes. 
 
 **4. Data Source**
-Example:
 Source: https://www.udemy.com/course/complete-data-analyst-bootcamp-from-basics-to-advanced/learn/lecture/47789127#overview
 
 **5. Features/Highlights**
@@ -179,16 +175,18 @@ Source: https://www.udemy.com/course/complete-data-analyst-bootcamp-from-basics-
 2. Goal of the Dashboard
 3. A Walkthrough of Key Visuals
 
-Example:
 
 **1. Key Questions:**
-Which Country/Region generates more profit? 
-Which Country/Region has more sales? 
-What's the average sales of Products? 
-What's the total quantity sold in different countries?
+
+- **Energy Source Contribution:** Which specific energy sources are responsible for generating the highest amounts of KWH and CSU? (Understanding the contribution of various sources, such as solar, wind, fossil fuels, and hydroelectric power, is crucial for evaluating efficiency and sustainability.)
+
+- **International Usage Patterns:** Which countries exhibit the highest levels of KWH and CSU consumption? (Identifying these countries allows for a comparative analysis of energy usage trends and highlights potential areas for energy conservation efforts.)
+
+- **Regional Analysis:** What are the top six regions based on KWH and CSU usage? (This insight will aid in recognizing geographical patterns in energy consumption and guide resource allocation for energy initiatives.)
 
 **2. Goal of the Dashboard:**
-To deliver an interactive visual tool that enables the users to explore the data with ease. Uncover the sales trend.
+To deliver an interactive visual tool that enables the users to explore the data with ease. Uncover the usage of KWH and CSU.
+The primary objective of this dashboard is to provide users with an interactive and intuitive visual tool that simplifies data exploration and analysis. By allowing users to seamlessly navigate through the dataset. The dashboard helps to uncover intricate details regarding the usage patterns of KWH and CSU. This ultimately facilitates informed decision-making and encourages strategic planning for energy management and sustainability efforts.
 
 **3. A Walkthrough of Key Visuals:**
 

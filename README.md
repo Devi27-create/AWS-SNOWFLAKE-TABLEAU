@@ -4,31 +4,147 @@
 
 **Step 1: Creating & Loading Data to S3 Bucket**
 
-First of all I opened my account to create the bucket, and for that I had to choose a storage and as for that I choose S3. After this by clicking on the options create bucket I filled out the nessecary details like, bucket type, region (which is same as in snowflake), & bucket name and like this I created a bucket under tha name, 'tableau.project'. 
+To begin the process, I logged into my AWS account to set up a new S3 bucket. This required me to select S3 as my storage option, which is ideal for scalable cloud storage. After clicking on the "Create Bucket" option, I was prompted to fill in several necessary details like, selected the type of bucket, region (ensuring it matched the region used in Snowflake for seamless integration), and bucket name, which i named as 'tableau.project2e.'
 
-Now that I had created the bucket, I loaded my dataset into the bucket by clicking on the same available in general purpose bucket, after this by simply clicking on upload and then at add files I loaded the dataset into the AWS
+Once the bucket 'tableau.project2e' was successfully created, I proceeded to load my dataset into it. The user-friendly interface allowed me to navigate to the general-purpose bucket settings, where I found the "Upload" button. By clicking on this option, I was prompted to "Add Files," which opened a dialog for me to select the dataset I wanted to upload. After selecting the appropriate files from my local storage, I initiated the upload process, and within moments, my dataset was securely stored in the AWS bucket.
 
 **Step 2: Creating a Role**
 
-well the role here is needed to establish a connection between AWS and Snowflake.
-and to create a role first of all we need to go on the console home. then under the all services I choose IAM, then under the Access Management by clicking on roles I then clicked on create role then under that, by filling out the 3 step details I created the Role.
+Well to facilitate a smooth connection between AWS and Snowflake, it was essential to create a role. I started this process by navigating to the AWS console home page. From there, I explored the "All Services" section and selected IAM (Identity and Access Management), a critical component for managing access permissions. Under the Access Management tab, I clicked on "Roles," then chose the "Create Role" option to begin the role creation process.
+
+The platform guided me through a three-step setup. I carefully filled in the required details at each step, specifying permissions and trust relationships that would govern the connection between AWS and Snowflake. After reviewing my inputs, I successfully created the role, thereby establishing a crucial link for data transfer and processing between the two platforms.
 
 ## Snowflake + AWS
 
 **Step 1: Creating The Integration Object & Updating The Trust Policy** 
 
-For this I first of all clicked on home tab and then under the projects I opened a new worksheet and wrote a piece of code. After this since I needed to update the bucket details so going back to the AWS accounts console home in the all services I choose S3 under Storage, and then I clicked on the bucket I had created previously, and updated the Storage Allowed Location as per the name of the project, and also updated the Storage ARN Role ARN as per the ARN in Role. After that I exceuted the piece of code for Integration Object in snowflake by pressing Ctrl + Enter. Later this I also exceuted the code for updating The trust policy in amazon account in snowflake by selecting it and pressing Ctrl + Enter.
+To begin the process, I navigated to the Home tab in my application, where I proceeded to the Projects section and opened a new worksheet. In this worksheet, I crafted a script to create a storage integration in Snowflake. The code I used is as follows:
 
-After all that finally I updated the Trust Policy accordingly in AWS. Going to the roles in the Trust Relationships, I clicked on the edit trust policy. Here I updated the "AWS" value to the User ARN value which I got after executing the code in snowflake, apart that I also updated the "sts:externalid" value which i had previously filled with some random values to the values I got after executing the code in snowflake. then I clicked on update policy and updated the policy.
+```sql
+CREATE OR REPLACE STORAGE INTEGRATION tableau_Integration
+TYPE = EXTERNAL_STAGE
+STORAGE_PROVIDER = 'S3'
+ENABLED = TRUE
+STORAGE_AWS_ROLE_ARN = 'arn:aws:iam::124356268240:role/Tableau.Role1ee'
+STORAGE_ALLOWED_LOCATIONS = ('s3://tableau.project2e/')
+COMMENT = 'Optional Comment'
+```
+
+After executing this code, I realized that I needed to update the bucket details to reflect the project specifications accurately. Therefore, I returned to the AWS Management Console, selecting "All Services" and then clicking on “S3” under the Storage category. There, I located the bucket I had previously created and accessed its settings to modify the Storage Allowed Locations to align with the project's name. Additionally, I updated the Storage AWS Role ARN to match the appropriate ARN for the role I intended to use. 
+
+Once these changes were made, I executed the provided code to create the integration object in Snowflake. To verify that everything was set up correctly, I retrieved the details of the integration object using the following command:
+
+```sql
+// Description of Integration Object
+DESC INTEGRATION tableau_Integration;
+```
+
+After confirming the integration's details, I turned my attention to updating the Trust Policy in AWS. I navigated to the IAM Roles section and selected the role associated with the integration. Under the Trust Relationships tab, I clicked on "Edit Trust Policy." 
+
+Here, I meticulously replaced the "AWS" value with the User ARN that I retrieved earlier from executing the Snowflake code. Moreover, I updated the "sts:externalid" value, which I had initially set using arbitrary values, changing it to the specific values provided by Snowflake after executing the integration code. Once all modifications were completed, I clicked on “Update Policy” to save the changes, thereby finalizing the integration and trust relationship setup.
 
 **Step 2: Loading the Data into Snowflake**
 
-Here first of all I wrote a code to create a database naming tableau and executed the code. After that I wrote the code for schema naming tableau_data and exceuted the same and then I created a blank table naming tableau_dataset having the columns with there datatypes, according to the available dataset and then I executed that code as well. 
-Now I needed to create a stage to bring the data into snowflake and for that I wrote another code mentioning the stage name as tableau.tableau_dataset.tableau_stage then the url and storage_integration and then executed this. After this I copied the data into the table we have created "tableau_dataset" from the stage we have created in the last step and executed it and then I run the select statement to see the data that had got loaded into Snowflake. 
+Here first of all I wrote a code to create a database naming "tableau," and executed the code. Following that, I created a schema called "tableau_data," which serves as the organizational structure within the database, and executed the corresponding code. After setting up the schema, I proceeded to create a blank table titled "tableau_dataset." This table was designed with columns and their respective data types, tailored to accommodate the specific dataset. The execution of this code, resulted in a properly structured table. Here’s the code I utilized for creating the database, schema, and table:
+
+```sql
+CREATE database tableau;
+
+create schema tableau_Data;
+
+create table tableau_dataset (
+Household_ID	string,Region	string,Country	string,Energy_Source	string,
+Monthly_Usage_kWh	float,Year	int,Household_Size	int,Income_Level	string,
+Urban_Rural	string,Adoption_Year	int,Subsidy_Received	string,Cost_Savings_USD float
+
+);
+```
+
+Now I needed to create a stage to bring the data into snowflake and for that I wrote another code mentioning the stage name as tableau.tableau_dataset.tableau_stage then the url and storage_integration and then executed this.
+-- Code used:
+Next, I needed to create a stage to facilitate the data import into Snowflake and for that I wrote a separate code that defined the stage name as "tableau.tableau_Data.tableau_stage," including the necessary URL and storage integration details. After executing this code, the stage was successfully created.
+
+Here’s the code used for this step:
+
+```sql
+create stage tableau.tableau_Data.tableau_stage
+url = 's3://tableau.project2e'
+storage_integration = tableau_Integration
+```
+
+After this, I transferred the data from the created stage "tableau_stage" into the "tableau_dataset" table. For this operation, I executed a copy command and ran a select statement to verify that the data loaded correctly into Snowflake.
+
+Here’s the code utilized for copying data and executing the selection:
+
+```sql
+copy into tableau_dataset 
+from @tableau_stage
+file_format = (type=csv field_delimiter=',' skip_header=1 )
+on_error = 'continue'
+
+select * from tableau_dataset;
+```
+This step effectively ensured that the data was accurately imported, and allowed me to view the entries in the "tableau_dataset" table.
+
+**Step 3: Data Transformations** 
+After loading the data and gaining a comprehensive understanding of its structure and content, I proceeded to implement several data transformations. To ensure the original dataset remained intact, I created a new table called "energy_consumption". This was accomplished using the following SQL command:
+
+```sql
+CREATE TABLE energy_consumption AS SELECT * FROM tableau_dataset;
+```
+
+With the new table in place, I focused on transforming the **Monthly_usage_kwh** column. The objective was to adjust the energy consumption values based on income levels. Specifically, I increased the monthly usage by 10% for low-income levels, 20% for middle-income levels, and 30% for high-income levels. The SQL updates for these transformations were executed as follows:
+
+```sql
+-- For low income level
+UPDATE energy_consumption
+SET monthly_usage_kwh = monthly_usage_kwh * 1.1
+WHERE income_level = 'Low';
+
+-- For middle income level
+UPDATE energy_consumption
+SET monthly_usage_kwh = monthly_usage_kwh * 1.2
+WHERE income_level = 'Middle';
+
+-- For high income level
+UPDATE energy_consumption
+SET monthly_usage_kwh = monthly_usage_kwh * 1.3
+WHERE income_level = 'High';
+```
+
+After implementing these adjustments, I retrieved the updated records with the command:
+
+```sql
+SELECT * FROM energy_consumption;
+```
+
+In addition to the modifications made to the monthly usage, I also focused on transforming the **Cost_Savings_USD** column. For this adjustment, I aimed to lower the values across all income levels: reducing by 10% for low-income levels, 20% for middle-income levels, and 30% for high-income levels. The corresponding SQL update statements were as follows:
+
+```sql
+-- For low income level
+UPDATE energy_consumption
+SET cost_savings_usd = cost_savings_usd * 0.9
+WHERE income_level = 'Low';
+
+-- For middle income level
+UPDATE energy_consumption
+SET cost_savings_usd = cost_savings_usd * 0.8
+WHERE income_level = 'Middle';
+
+-- For high income level
+UPDATE energy_consumption
+SET cost_savings_usd = cost_savings_usd * 0.7
+WHERE income_level = 'High';
+```
+
+Finally,I queried the updated table once again to review the changes:
+
+```sql
+SELECT * FROM energy_consumption;
+```
 
 
-
-# Dashboard
+## Dashboard
 
 **Structure and Order**
 1. Project Title/ Headline
@@ -114,7 +230,7 @@ The Clustered Column Chart visually represents the manufacturing costs associate
 The line chart presents a detailed comparison of profit and sales figures for the years 2013 and 2014. It breaks down the data into various segments, including quarterly, monthly, and daily analyses. 
 
 **6.Screenshots:**
-See what the dashboard looks like - ![Alt Text](https://github.com/Devi27-create/Product-Sales-Dashboard/blob/main/Total%20Quantity%20Sold%20By%20Segment%20Trends%20Of%20Sales%20In%20Different%20Countries%20Total%20Discounts%20by%20Discount%20Bands.png](https://github.com/Devi27-create/AWS-SNOWFLAKE-TABLEAU/blob/main/Energy_Consumption_dashboard.png).
+See what the dashboard looks like - ![Alt Text](https://github.com/Devi27-create/AWS-SNOWFLAKE-TABLEAU/blob/main/Energy_Consumption_dashboard.png)
 
 
 

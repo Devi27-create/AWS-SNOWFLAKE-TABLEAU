@@ -156,7 +156,7 @@ After successfully linking Snowflake and Tableau using the specified server deta
 5. Features/Highlights
 6. Screenshots
 
-**1. Project Title/ Headline:**
+**1. Dashboard Title/ Headline:**
 
 ***Dashboard Title: Energy Consumption Dashboard***  
 This project presents an innovative and interactive data visualization tool designed to facilitate the exploration of KWH and CSU across various countries.

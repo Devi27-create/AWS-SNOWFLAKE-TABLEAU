@@ -149,7 +149,7 @@ SELECT * FROM energy_consumption;
 After successfully linking Snowflake and Tableau using the specified server details, I embarked on the process of creating the dashboard. This stage involved the following structure and order to ensure clarity and effectiveness in data presentation.
 
 **Structure and Order**
-1. Project Title/ Headline
+1. Dashboard Title/ Headline
 2. Short Description
 3. Tech Stack
 4. Data Source
@@ -158,7 +158,7 @@ After successfully linking Snowflake and Tableau using the specified server deta
 
 **1. Project Title/ Headline:**
 
-***Project Title: Energy Consumption Dashboard***  
+***Dashboard Title: Energy Consumption Dashboard***  
 This project presents an innovative and interactive data visualization tool designed to facilitate the exploration of kilowatt-hour (KWH) and carbon stack usage (CSU) across various countries.
 
 **2. Short Description:**

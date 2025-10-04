@@ -159,7 +159,7 @@ After successfully linking Snowflake and Tableau using the specified server deta
 **1. Project Title/ Headline:**
 
 ***Dashboard Title: Energy Consumption Dashboard***  
-This project presents an innovative and interactive data visualization tool designed to facilitate the exploration of kilowatt-hour (KWH) and carbon stack usage (CSU) across various countries.
+This project presents an innovative and interactive data visualization tool designed to facilitate the exploration of KWH and CSU across various countries.
 
 **2. Short Description:**
 
@@ -203,16 +203,16 @@ The text box displays the title of the Dashboard, ***Energy Consumption Dashboar
 This visually engaging bar chart illustrates the electric consumption in kilowatt-hours (KWH) across various countries. Australia leads the pack with an impressive usage of 80,410 KWH, highlighting its high energy demands. In contrast, Chile registers the lowest energy consumption among the listed countries, with a modest usage of 16,556 KWH, reflecting its comparatively lower energy requirements.
 
 **3. CSU by Country (Bar Chart) (Middle):**
-The bar chart presented here captures the energy usage in Central Standard Units (CSU) by country. New Zealand stands out as the largest consumer, utilizing 16,862 CSU, indicative of its significant energy needs. Conversely, Nigeria occupies the bottom position with a total of 5,043 CSU, while Kenya follows closely behind at 5,126 CSU, illustrating the varying energy consumption patterns across these nations.
+The bar chart presented here captures the energy usage in CSU by country. New Zealand stands out as the largest consumer, utilizing 16,862 CSU, indicative of its significant energy needs. Conversely, Nigeria occupies the bottom position with a total of 5,043 CSU, while Kenya follows closely behind at 5,126 CSU, illustrating the varying energy consumption patterns across these nations.
 
 **4. KWH by Region (Column Chart) (Top Right Corner):**
 This column chart effectively displays the energy consumption in KWH among the top six regions worldwide. Leading this chart is a region with a staggering total of 163,213 KWH, demonstrating substantial energy requirements. Notably, Australia appears at the lower end of this spectrum, with a usage of 145,825 KWH, indicating its relative energy consumption compared to other regions.
 
 **5. KWH by Energy Source (Column Chart) (Top Second Right Corner):**
-In this column chart, the five primary energy sources are analyzed based on their usage in Central Standard Units (CSU). Wind energy emerges as the most utilized source, with a remarkable consumption of 214,492 CSU, showcasing its growing importance in the energy mix. In contrast, the Geothermal Energy Source represents the smallest share, with a usage of 164,182 CSU, underscoring the need for increased investment in this area.
+In this column chart, the five primary energy sources are analyzed based on their usage in KWH. Wind energy emerges as the most utilized source, with a remarkable consumption of 214,492 KWH, showcasing its growing importance in the energy mix. In contrast, the Geothermal Energy Source represents the smallest share, with a usage of 164,182 KWH, underscoring the need for increased investment in this area.
 
 **6. CSU by Region (Column Chart) (Bottom Second Right Corner):**
-This column chart visually represents the energy consumption in KWH across the top six regions. South America takes the lead with a notable consumption of 34,692 KWH, while Africa closely follows with 34,444 KWH, reflecting a competitive energy landscape. Meanwhile, North America registers the least consumption among these regions, with a total of 30,732 KWH, indicating differing energy usage patterns.
+This column chart visually represents the consumption in CSU across the top six regions. South America takes the lead with a notable consumption of 34,692 CSU, while Africa closely follows with 34,444 CSU, reflecting a competitive energy landscape. Meanwhile, North America registers the least consumption among these regions, with a total of 30,732 CSU, indicating differing energy usage patterns.
 
 **7. CSU by Energy Source (Column Chart) (Bottom Right Corner):**
 Here, the column chart categorizes the top five energy sources based on their usage in CSU. Wind energy again stands out, with a considerable consumption of 47,507 CSU, emphasizing its significance in energy generation. Conversely, the Geothermal Energy Source records the lowest usage in this context, with 32,841 CSU, pointing to potential areas for development in sustainable energy practices.

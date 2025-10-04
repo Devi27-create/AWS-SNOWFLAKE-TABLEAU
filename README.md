@@ -146,6 +146,8 @@ SELECT * FROM energy_consumption;
 
 ## Dashboard
 
+After successfully linking Snowflake and Tableau using the specified server details, I embarked on the process of creating the dashboard. This stage involved the following structure and order to ensure clarity and effectiveness in data presentation.
+
 **Structure and Order**
 1. Project Title/ Headline
 2. Short Description

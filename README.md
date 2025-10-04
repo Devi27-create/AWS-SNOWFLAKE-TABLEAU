@@ -137,7 +137,7 @@ SET cost_savings_usd = cost_savings_usd * 0.7
 WHERE income_level = 'High';
 ```
 
-Finally,I queried the updated table once again to review the changes:
+Finally, I queried the updated table once again to review the changes:
 
 ```sql
 SELECT * FROM energy_consumption;
@@ -154,23 +154,27 @@ SELECT * FROM energy_consumption;
 5. Features/Highlights
 6. Screenshots
 
-**1. Project Title/ Headline**
+**1. Project Title/ Headline:**
+
 ***Project Title: Energy Consumption Dashboard***  
 This project presents an innovative and interactive data visualization tool designed to facilitate the exploration of kilowatt-hour (KWH) and carbon stack usage (CSU) across various countries.
 
-**2. Short Description**
+**2. Short Description:**
+
 Energy Consumption Dashboard is a visually engaging and analytical Tableau report designed to help users explore and compare KWH and CSU by country, region, and energy source, across multiple countries. The dashboard focuses on highlighting Top 6 KWH by region, Top 6 CSU by region, Top 5 KWH Energy Source, Top 5 CSU Energy Source, KWH by country and CSU by country.
 The Energy Consumption Dashboard serves as an engaging and analytical Tableau report, desiged to empower users in examining and comparing energy usage metrics, specifically KWH and CSU, by country, region, and energy source. The dashboard is structured to emphasize key insights, including the Top 6 KWH and Top 6 CSU by region, as well as the Top 5 KWH and Top 5 CSU by energy source. Users can seamlessly navigate the data to view KWH and CSU metrics on a country-by-country basis, enabling a comprehensive understanding of energy consumption patterns across the globe. This tool is particularly valuable for policymakers, researchers, and businesses seeking to analyze energy efficiency and sustainability initiatives.
 
-**3. Tech Stack**
-AWS+Snowflake - Utilized for robust data storage and management, supporting large-scale data processing essential for real-time analysis
-Tableau - The primary data visualization platform used to create the dashboard, offering advanced graphical representations and interactive features that enhance user engagement and comprehension of the data.
-File Format - The dashboard is developed in .twb format for easy updates and maintenance, with snapshot visualizations saved as .png files for sharing and reporting purposes. 
+**3. Tech Stack:**
 
-**4. Data Source**
+-**AWS+Snowflake-** Utilized for robust data storage and management, supporting large-scale data processing essential for real-time analysis
+-**Tableau-** The primary data visualization platform used to create the dashboard, offering advanced graphical representations and interactive features that enhance user engagement and comprehension of the data.
+-**File Format-** The dashboard is developed in .twb format for easy updates and maintenance, with snapshot visualizations saved as .png files for sharing and reporting purposes. 
+
+**4. Data Source:**
 Source: https://www.udemy.com/course/complete-data-analyst-bootcamp-from-basics-to-advanced/learn/lecture/47789127#overview
 
-**5. Features/Highlights**
+**5. Features/Highlights:**
+
 1. Key Questions
 2. Goal of the Dashboard
 3. A Walkthrough of Key Visuals
@@ -180,52 +184,37 @@ Source: https://www.udemy.com/course/complete-data-analyst-bootcamp-from-basics-
 
 - **Energy Source Contribution:** Which specific energy sources are responsible for generating the highest amounts of KWH and CSU? (Understanding the contribution of various sources, such as solar, wind, fossil fuels, and hydroelectric power, is crucial for evaluating efficiency and sustainability.)
 
-- **International Usage Patterns:** Which countries exhibit the highest levels of KWH and CSU consumption? (Identifying these countries allows for a comparative analysis of energy usage trends and highlights potential areas for energy conservation efforts.)
+- **International Usage Patterns:** Which countries show the highest levels of KWH and CSU consumption? (Identifying these countries allows for a comparative analysis of energy usage trends and highlights potential areas for energy conservation efforts.)
 
 - **Regional Analysis:** What are the top six regions based on KWH and CSU usage? (This insight will aid in recognizing geographical patterns in energy consumption and guide resource allocation for energy initiatives.)
 
 **2. Goal of the Dashboard:**
-To deliver an interactive visual tool that enables the users to explore the data with ease. Uncover the usage of KWH and CSU.
+
 The primary objective of this dashboard is to provide users with an interactive and intuitive visual tool that simplifies data exploration and analysis. By allowing users to seamlessly navigate through the dataset. The dashboard helps to uncover intricate details regarding the usage patterns of KWH and CSU. This ultimately facilitates informed decision-making and encourages strategic planning for energy management and sustainability efforts.
 
 **3. A Walkthrough of Key Visuals:**
 
-#Multi-Row Card (top): Shows a total of 118,726,350.26 in sales revenue, yielding a substantial total profit of 16,893,702.26. With gross sales amounting to 127,931,598.50, the total quantity sold reached an impressive 1,125,806 units. 
+# Text Box: (top): 
+The text box displays the title of the Dashboard, ***Energy Consumption Dashboard***.
 
-#Total Quantity Sold by Segments (Pie Chart):
-The pie chart provides a breakdown of the quantities sold across distinct market segments, including Government, Midmarket, Enterprise, Channel Partners, and Small Businesses. This segmentation highlights the sales distribution and emphasizes the performance in each category.
+# KWH by Country (Bar Chart) (Left Corner):
+This visually engaging bar chart illustrates the electric consumption in kilowatt-hours (KWH) across various countries. Australia leads the pack with an impressive usage of 80,410 KWH, highlighting its high energy demands. In contrast, Chile registers the lowest energy consumption among the listed countries, with a modest usage of 16,556 KWH, reflecting its comparatively lower energy requirements.
 
-#Total Discounts by Discount Bands (Funnel):
-The funnel visualization illustrates the various discount tiers categorized as High, Medium, and Low. Each tier is accompanied by its corresponding discount values, allowing for a clear understanding of the pricing strategy employed across different offers.
+# CSU by Country (Bar Chart) (Middle):
+The bar chart presented here captures the energy usage in Central Standard Units (CSU) by country. New Zealand stands out as the largest consumer, utilizing 16,862 CSU, indicative of its significant energy needs. Conversely, Nigeria occupies the bottom position with a total of 5,043 CSU, while Kenya follows closely behind at 5,126 CSU, illustrating the varying energy consumption patterns across these nations.
 
-#Trend of Sales In Different Countries by Year (Waterfall Chart):
-The Waterfall Chart vividly illustrates the sales performance for the years 2013 and 2014, showcasing a dynamic visual flow of sales growth across various countries. It captures not only the total increase in sales over this period but also highlights the changes in sales figures between the two years, offering a clear perspective on trends and changes in each market.
+# KWH by Region (Column Chart) (Top Right Corner):
+This column chart effectively displays the energy consumption in KWH among the top six regions worldwide. Leading this chart is a region with a staggering total of 163,213 KWH, demonstrating substantial energy requirements. Notably, Australia appears at the lower end of this spectrum, with a usage of 145,825 KWH, indicating its relative energy consumption compared to other regions.
 
-#Top 5 Products by Profit (Area Chart):
-The area chart displays the top five products ranked by their profit contributions, illustrating a clear comparison of their performance. 
-1. **Paseo** stands out as the leading product, generating an impressive profit of **$4.8 million**. 
-2. Following  **VTT**, which accrued a profit of **$3.0 million**, showcasing its strong market presence.
-3. In third place, **Amarilla** achieved a profit of **$2.8 million**, reflecting its popularity among consumers.
-4. **Velo** comes in fourth with a profit of **$2.3 million**, indicating a solid demand for this product. 
-5. Lastly, **Montana** with a profit of **$2.1 million**, highlights its reliability and appeal.
+# KWH by Energy Source (Column Chart) (Top Second Right Corner):
+In this column chart, the five primary energy sources are analyzed based on their usage in Central Standard Units (CSU). Wind energy emerges as the most utilized source, with a remarkable consumption of 214,492 CSU, showcasing its growing importance in the energy mix. In contrast, the Geothermal Energy Source represents the smallest share, with a usage of 164,182 CSU, underscoring the need for increased investment in this area.
 
-#Top 5 Product By Quantity (Area Chart): The Area Chart illustrates the top five products based on sales quantity, showcasing their impressive performance within the market. 
-The leading product, **Paseo** stands out with a significant total of 0.34 million units sold. Following closely is **VTT** , with sales reaching 0.17 million units, indicating strong demand. **Velo** and **Amarilla** both share a notable sales figure of 0.16 million units each, reflecting their comparable market presence and appeal to a similar customer base. Lastly, Montana rounds out the list with a respectable 0.15 million units sold, contributing to its overall success.
+# CSU by Region (Column Chart) (Bottom Second Right Corner):
+This column chart visually represents the energy consumption in KWH across the top six regions. South America takes the lead with a notable consumption of 34,692 KWH, while Africa closely follows with 34,444 KWH, reflecting a competitive energy landscape. Meanwhile, North America registers the least consumption among these regions, with a total of 30,732 KWH, indicating differing energy usage patterns.
 
+# CSU by Energy Source (Column Chart) (Bottom Right Corner):
+Here, the column chart categorizes the top five energy sources based on their usage in CSU. Wind energy again stands out, with a considerable consumption of 47,507 CSU, emphasizing its significance in energy generation. Conversely, the Geothermal Energy Source records the lowest usage in this context, with 32,841 CSU, pointing to potential areas for development in sustainable energy practices.
 
-#Top 5 Product By Quantity (Area Chart):
-The area chart illustrates the top five products ranked by quantity sold, providing a clear visual representation of their performance. 
-1. **Paseo** leads the chart with an impressive 33 million units sold, highlighting its popularity and strong demand in the market.
-2. **VTT** follows in second place with sales reaching 21 million units, indicating solid consumer interest and a robust market presence.
-3. In third position, **Velo** achieves a notable 18 million units sold, demonstrating its appeal among customers and contributing significantly to overall sales.
-4. Also tied with 18 million units, **Amarilla** captures the fourth spot, showcasing that it resonates well with buyers and is on par with Velo in terms of popularity.
-5. Finally, **Montana** rounds out the top five with 15 million units sold, reinforcing its status as a competitive product within the lineup.
-
-#Manufacturing Cost Of Different Products In Different Countries (Clustered Column Chart):
-The Clustered Column Chart visually represents the manufacturing costs associated with various products across several countries, specifically Canada, France, Germany, Mexico, and the United States of America.
-
-#Profit and Sales by Year, Quarter, Month and Day (Line Chart):
-The line chart presents a detailed comparison of profit and sales figures for the years 2013 and 2014. It breaks down the data into various segments, including quarterly, monthly, and daily analyses. 
 
 **6.Screenshots:**
 See what the dashboard looks like - ![Alt Text](https://github.com/Devi27-create/AWS-SNOWFLAKE-TABLEAU/blob/main/Energy_Consumption_dashboard.png)

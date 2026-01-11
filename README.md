@@ -11,7 +11,6 @@ This solution enables users to interactively identify energy trends, compare reg
 
 CSV Dataset → AWS S3 → Snowflake (Staging & Transformations) → Tableau Dashboard
 
-
 ## Tech Stack
 
 AWS S3 – Cloud storage for raw datasets
@@ -28,13 +27,13 @@ Udemy – Complete Data Analyst Bootcamp
 https://www.udemy.com/course/complete-data-analyst-bootcamp-from-basics-to-advanced/
 
 ## Data Pipeline Overview
-1. Data Ingestion (AWS S3)
+**1. Data Ingestion (AWS S3)**
 
 Created an S3 bucket to store the raw CSV dataset.
 
 Uploaded energy consumption data to AWS for scalable storage.
 
-2. Snowflake Integration
+**2. Snowflake Integration**
 
 Configured AWS IAM Role and Snowflake Storage Integration.
 
@@ -42,7 +41,7 @@ Established a secure connection between Snowflake and S3.
 
 Created stages to load data directly from S3 into Snowflake tables.
 
-3. Data Modeling & Transformations
+**3. Data Modeling & Transformations**
 
 Loaded raw data into Snowflake tables.
 
@@ -54,7 +53,7 @@ Monthly Energy Usage (KWH)
 
 Cost Savings (CSU)
 
-4. Visualization (Tableau)
+**4. Visualization (Tableau)**
 
 Connected Tableau directly to Snowflake.
 

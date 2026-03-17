@@ -1,5 +1,4 @@
-# AWS–Snowflake–Tableau-Project
-Energy Consumption Dashboard
+# AWS–Snowflake–Tableau
 
 ## Project Overview
 

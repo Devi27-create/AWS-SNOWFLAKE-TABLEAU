@@ -23,8 +23,9 @@ SQL – Data loading and transformation logic
 
 ## Data Source
 
-Udemy – Complete Data Analyst Bootcamp
-https://www.udemy.com/course/complete-data-analyst-bootcamp-from-basics-to-advanced/
+- Dataset: https://www.udemy.com/course/complete-data-analyst-bootcamp-from-basics-to-advanced/
+
+- Developed as part of an academic project in data analytics and visualization.
 
 ## Data Pipeline Overview
 **1. Data Ingestion (AWS S3)**

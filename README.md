@@ -111,16 +111,13 @@ See what the dashboard looks like - ![Alt Text](https://github.com/Devi27-create
 
 ## Repository Structure
 
-├── sql/
-│   ├── create_tables.sql
-│   ├── storage_integration.sql
-│   ├── transformations.sql
-├── docs/
-│   ├── aws_setup.md
-│   ├── snowflake_setup.md
-│   └── tableau_guide.md
-├── dashboard/
-│   └── Energy_Consumption.twb
+|
+├── Energy_Consumption_Dashboard.twb
+│  
+├── Energy_Consumption_Dashboard.twb
+|
+├── Renewable_Energy_Usage_Sampled.csv
+|
 └── README.md
 
 

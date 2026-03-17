@@ -1,4 +1,4 @@
-# AWS–Snowflake–Tableau
+# AWS–Snowflake–Tableau-Project
 Energy Consumption Dashboard
 
 ## Project Overview
@@ -111,6 +111,7 @@ See what the dashboard looks like - ![Alt Text](https://github.com/Devi27-create
 
 ## Repository Structure
 
+AWS–Snowflake–Tableau/
 |
 ├── Energy_Consumption_Dashboard.twb
 │  
